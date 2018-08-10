@@ -33,6 +33,9 @@
 		5083566F210B29D50062D740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5083566E210B29D50062D740 /* Assets.xcassets */; };
 		50835672210B29D50062D740 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50835670210B29D50062D740 /* LaunchScreen.storyboard */; };
 		50835677210B2A070062D740 /* SendActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50639784210A188E00ADB053 /* SendActions.swift */; };
+		50D49C7B211D620100D0DB6B /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D49C7A211D620100D0DB6B /* IntentHandler.swift */; };
+		50D49C7F211D620100D0DB6B /* siri_car_opener.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 50D49C78211D620100D0DB6B /* siri_car_opener.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		50D49C83211D798D00D0DB6B /* SendActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50639784210A188E00ADB053 /* SendActions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5063978B210A191300ADB053;
 			remoteInfo = open_close;
+		};
+		50D49C7D211D620100D0DB6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5063973F210A15F700ADB053 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50D49C77211D620100D0DB6B;
+			remoteInfo = siri_car_opener;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -89,6 +99,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				50639799210A191300ADB053 /* open_close.appex in Embed App Extensions */,
+				50D49C7F211D620100D0DB6B /* siri_car_opener.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +140,9 @@
 		50835673210B29D50062D740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50D49C50211C8EFB00D0DB6B /* CarOpener.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CarOpener.entitlements; sourceTree = "<group>"; };
 		50D49C5F211D61A200D0DB6B /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		50D49C78211D620100D0DB6B /* siri_car_opener.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = siri_car_opener.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		50D49C7A211D620100D0DB6B /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		50D49C7C211D620100D0DB6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +175,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		50D49C75211D620100D0DB6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -172,6 +193,7 @@
 				5063976E210A168300ADB053 /* car_Extension */,
 				50639790210A191300ADB053 /* open_close */,
 				50835666210B29D40062D740 /* InfinitiveOpenClose */,
+				50D49C79211D620100D0DB6B /* siri_car_opener */,
 				5063978D210A191300ADB053 /* Frameworks */,
 				50639748210A15F700ADB053 /* Products */,
 			);
@@ -185,6 +207,7 @@
 				5063976A210A168200ADB053 /* car Extension.appex */,
 				5063978C210A191300ADB053 /* open_close.appex */,
 				50835665210B29D40062D740 /* InfinitiveOpenClose.app */,
+				50D49C78211D620100D0DB6B /* siri_car_opener.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,6 +282,15 @@
 			path = InfinitiveOpenClose;
 			sourceTree = "<group>";
 		};
+		50D49C79211D620100D0DB6B /* siri_car_opener */ = {
+			isa = PBXGroup;
+			children = (
+				50D49C7A211D620100D0DB6B /* IntentHandler.swift */,
+				50D49C7C211D620100D0DB6B /* Info.plist */,
+			);
+			path = siri_car_opener;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -277,6 +309,7 @@
 			dependencies = (
 				5063977A210A168300ADB053 /* PBXTargetDependency */,
 				50639798210A191300ADB053 /* PBXTargetDependency */,
+				50D49C7E211D620100D0DB6B /* PBXTargetDependency */,
 			);
 			name = CarOpener;
 			productName = CarOpener;
@@ -351,6 +384,23 @@
 			productReference = 50835665210B29D40062D740 /* InfinitiveOpenClose.app */;
 			productType = "com.apple.product-type.application";
 		};
+		50D49C77211D620100D0DB6B /* siri_car_opener */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50D49C80211D620100D0DB6B /* Build configuration list for PBXNativeTarget "siri_car_opener" */;
+			buildPhases = (
+				50D49C74211D620100D0DB6B /* Sources */,
+				50D49C75211D620100D0DB6B /* Frameworks */,
+				50D49C76211D620100D0DB6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = siri_car_opener;
+			productName = siri_car_opener;
+			productReference = 50D49C78211D620100D0DB6B /* siri_car_opener.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -381,6 +431,9 @@
 					50835664210B29D40062D740 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
+					50D49C77211D620100D0DB6B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 				};
 			};
 			buildConfigurationList = 50639742210A15F700ADB053 /* Build configuration list for PBXProject "CarOpener" */;
@@ -401,6 +454,7 @@
 				50639769210A168200ADB053 /* car Extension */,
 				5063978B210A191300ADB053 /* open_close */,
 				50835664210B29D40062D740 /* InfinitiveOpenClose */,
+				50D49C77211D620100D0DB6B /* siri_car_opener */,
 			);
 		};
 /* End PBXProject section */
@@ -451,6 +505,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		50D49C76211D620100D0DB6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -494,6 +555,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		50D49C74211D620100D0DB6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50D49C7B211D620100D0DB6B /* IntentHandler.swift in Sources */,
+				50D49C83211D798D00D0DB6B /* SendActions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -511,6 +581,11 @@
 			isa = PBXTargetDependency;
 			target = 5063978B210A191300ADB053 /* open_close */;
 			targetProxy = 50639797210A191300ADB053 /* PBXContainerItemProxy */;
+		};
+		50D49C7E211D620100D0DB6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50D49C77211D620100D0DB6B /* siri_car_opener */;
+			targetProxy = 50D49C7D211D620100D0DB6B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -876,6 +951,44 @@
 			};
 			name = Release;
 		};
+		50D49C81211D620100D0DB6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9GXW8252L9;
+				INFOPLIST_FILE = siri_car_opener/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yurssoft.CarOpener.siri-car-opener";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		50D49C82211D620100D0DB6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9GXW8252L9;
+				INFOPLIST_FILE = siri_car_opener/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yurssoft.CarOpener.siri-car-opener";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -929,6 +1042,15 @@
 			buildConfigurations = (
 				50835674210B29D50062D740 /* Debug */,
 				50835675210B29D50062D740 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50D49C80211D620100D0DB6B /* Build configuration list for PBXNativeTarget "siri_car_opener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50D49C81211D620100D0DB6B /* Debug */,
+				50D49C82211D620100D0DB6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

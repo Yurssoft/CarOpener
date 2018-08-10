@@ -13,6 +13,7 @@ class Caller {
         let url = URL(string: "http://192.168.4.1/OPEN")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
+        request.timeoutInterval = 5
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             completion()
             guard error == nil else {
@@ -27,6 +28,7 @@ class Caller {
         let url = URL(string: "http://192.168.4.1/CLOSE")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
+        request.timeoutInterval = 5
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             completion()
             guard error == nil else {
