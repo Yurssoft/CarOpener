@@ -7,7 +7,7 @@
 		<key>CarOpener.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>InfinitiveOpenClose.xcscheme</key>
 		<dict>
@@ -22,7 +22,7 @@
 		<key>car.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>open_close.xcscheme</key>
 		<dict>
